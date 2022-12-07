@@ -18,3 +18,4 @@ target/test-classes/resources/global.properties
 target/test-classes/resources/TestDataBuild.class
 target/test-classes/resources/Utils.class
 target/test-classes/stepDefinitions/StepDefinitions.class
+

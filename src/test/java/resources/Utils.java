@@ -30,7 +30,7 @@ public class Utils {
 		if(req==null)
 		{
 		PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl"))
+		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).addCookie(System.getenv("cookie"))
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log))
 		.setContentType(ContentType.JSON).build();

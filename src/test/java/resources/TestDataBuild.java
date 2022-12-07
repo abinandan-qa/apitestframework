@@ -1,6 +1,7 @@
 package resources;
 
 import pojo.CreateBooking;
+import pojo.PartialUpdateBooking;
 import pojo.BookingDates;
 
 public class TestDataBuild {
@@ -19,6 +20,15 @@ public class TestDataBuild {
 		createBookingPayload.setAdditionalNeeds(additionalOptions);	
 		createBookingPayload.setBookingDates(bookingDate);
 		return createBookingPayload;
+	}
+	public PartialUpdateBooking partialUpdateABooking(String firstname, String lastName)
+	{
+		PartialUpdateBooking partialUpdateBookingPayload =new PartialUpdateBooking();	
+
+		partialUpdateBookingPayload.setFirstName(firstname);
+		partialUpdateBookingPayload.setLastName(lastName);
+		
+		return partialUpdateBookingPayload;
 	}
 
 }
